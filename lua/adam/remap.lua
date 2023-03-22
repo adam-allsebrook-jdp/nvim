@@ -18,15 +18,14 @@ vim.keymap.set("n", "<leader>svwm", function()
     require("vim-with-me").StopVimWithMe()
 end)
 --]]
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -53,9 +52,11 @@ end)
 -- my additions
 -- vim.keymap.set("n", "<leader>/", "gcc")
 -- vim.keymap.set("v", "<leader>/", "gc")
-vim.keymap.set("n", "q", "<cmd>lua require('goto-preview').close_all_win()<CR>", {noremap=true})
-    
--- nnoremap <silent> <leader>gg :LazyGit<CR>
-vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", {noremap=true})
+vim.keymap.set("n", "q", "<cmd>lua require('goto-preview').close_all_win()<CR>", { noremap = true })
 
-vim.keymap.set("n", "<leader>er", ":lua vim.diagnostic.open_float()<CR>", {noremap=true})
+-- nnoremap <silent> <leader>gg :LazyGit<CR>
+vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true })
+
+vim.keymap.set("n", "<leader>er", ":lua vim.diagnostic.open_float()<CR>", { noremap = true })
+
+vim.keymap.set("n", "<leader>f", ":Format", { noremap = true })
