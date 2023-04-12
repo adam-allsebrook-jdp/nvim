@@ -12,8 +12,13 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use("natecraddock/telescope-zf-native.nvim")
 
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    -- use({ 'rose-pine/neovim', as = 'rose-pine' })
+    -- use('shaunsingh/solarized.nvim')
+    -- use('ellisonleao/gruvbox.nvim')
+    -- use('navarasu/onedark.nvim')
+    use('EdenEast/nightfox.nvim')
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
@@ -43,7 +48,7 @@ return require('packer').startup(function(use)
 
             -- Snippets
             { 'L3MON4D3/LuaSnip' },             -- Required
-            { 'rafamadriz/friendly-snippets' }, -- Optional
+            -- { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
     use {
@@ -53,15 +58,15 @@ return require('packer').startup(function(use)
         end
     }
 
-    use {
-        "lukas-reineke/indent-blankline.nvim",
-        config = function()
-            require("indent_blankline").setup {
-                show_current_context = true,
-                show_current_context_start = true,
-            }
-        end
-    }
+    -- use {
+    --     "lukas-reineke/indent-blankline.nvim",
+    --     config = function()
+    --         require("indent_blankline").setup {
+    --             show_current_context = true,
+    --             show_current_context_start = true,
+    --         }
+    --     end
+    -- }
 
     use {
         'rmagatti/goto-preview',
@@ -85,4 +90,8 @@ return require('packer').startup(function(use)
     use('kdheepak/lazygit.nvim')
 
     use('jose-elias-alvarez/null-ls.nvim')
+
+    use('github/copilot.vim')
+
+    use('itchyny/lightline.vim')
 end)
