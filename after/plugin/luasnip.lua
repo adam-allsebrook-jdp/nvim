@@ -34,5 +34,3 @@ vim.keymap.set({ "n" }, "<leader><leader>l", "<cmd>source ~/.config/nvim/after/p
 
 require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_vscode").load({ paths = "~/.config/nvim/snippets" })
-
-print('ended luasnip')

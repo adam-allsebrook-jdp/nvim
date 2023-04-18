@@ -45,7 +45,38 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true })
 
 vim.keymap.set("n", "<leader>er", ":lua vim.diagnostic.open_float()<CR>", { noremap = true })
 
-vim.keymap.set("n", "<leader>f", ":Format<CR>", { noremap = true })
+-- vim.keymap.set("n", "<leader>f", ":Format<CR>", { noremap = true })
+
+-- dap
+vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>", { noremap = true })
+vim.keymap.set("n", "<F10>", ":lua require'dap'.step_over()<CR>", { noremap = true })
+vim.keymap.set("n", "<F11>", ":lua require'dap'.step_into()<CR>", { noremap = true })
+vim.keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+    { noremap = true })
+vim.keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>",
+    { noremap = true })
+vim.keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", { noremap = true })
 
 
--- luasnip
+-- trouble
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+  {silent = true, noremap = true}
+)
+

@@ -22,5 +22,9 @@
 -- }
 -- require('onedark').load()
 
-vim.g.lightline = { colorscheme = 'dayfox' }
-vim.cmd("colorscheme " .. 'dayfox')
+vim.g.lightline = { colorscheme = 'nightfox' }
+vim.cmd("colorscheme " .. 'nightfox')
+
+-- vim.cmd.colorscheme("catppuccin")
+
+-- vim.cmd.colorscheme("tokyonight-moon")
