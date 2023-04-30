@@ -18,8 +18,8 @@ return require('packer').startup(function(use)
     -- use('shaunsingh/solarized.nvim')
     -- use('ellisonleao/gruvbox.nvim')
     -- use('navarasu/onedark.nvim')
-    use('EdenEast/nightfox.nvim')
-    -- use('catppuccin/nvim', { as = 'catppuccin' })
+    -- use('EdenEast/nightfox.nvim')
+    use('catppuccin/nvim', { as = 'catppuccin' })
     -- use('folke/tokyonight.nvim')
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -114,7 +114,7 @@ return require('packer').startup(function(use)
     })
 
     require('packer').use({
-      'weilbith/nvim-code-action-menu',
-      cmd = 'CodeActionMenu',
+        'weilbith/nvim-code-action-menu',
+        cmd = 'CodeActionMenu',
     })
 end)

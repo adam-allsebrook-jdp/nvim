@@ -7,7 +7,8 @@ null_ls.setup({
     debug = true,
     sources = {
         formatting.prettier,
-        formatting.black.with({ extra_args = { '--fast' } }),
+        -- formatting.rubocop,
+        -- formatting.black.with({ extra_args = { '--fast' } }),
         formatting.stylua,
         formatting.rustfmt.with({ extra_args = { '--edition="2018"' } }),
         diagnostics.flake8,
