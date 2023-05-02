@@ -21,6 +21,10 @@ return require('packer').startup(function(use)
     -- use('EdenEast/nightfox.nvim')
     use('catppuccin/nvim', { as = 'catppuccin' })
     -- use('folke/tokyonight.nvim')
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+    }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
@@ -95,7 +99,7 @@ return require('packer').startup(function(use)
 
     use('github/copilot.vim')
 
-    use('itchyny/lightline.vim')
+    -- use('itchyny/lightline.vim')
 
     -- rails
     use('tpope/vim-rails')
@@ -117,4 +121,5 @@ return require('packer').startup(function(use)
         'weilbith/nvim-code-action-menu',
         cmd = 'CodeActionMenu',
     })
+    use('christoomey/vim-tmux-navigator')
 end)

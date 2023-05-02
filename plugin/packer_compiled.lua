@@ -131,15 +131,15 @@ _G.packer_plugins = {
     path = "/home/adam/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
-  ["lightline.vim"] = {
-    loaded = true,
-    path = "/home/adam/.local/share/nvim/site/pack/packer/start/lightline.vim",
-    url = "https://github.com/itchyny/lightline.vim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/adam/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/adam/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -211,6 +211,12 @@ _G.packer_plugins = {
     path = "/home/adam/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/adam/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/adam/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -255,6 +261,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/adam/.local/share/nvim/site/pack/packer/start/vim-rails",
     url = "https://github.com/tpope/vim-rails"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/adam/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 

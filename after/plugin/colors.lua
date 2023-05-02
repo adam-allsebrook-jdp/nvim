@@ -25,7 +25,13 @@
 -- vim.g.lightline = { colorscheme = 'nightfox' }
 -- vim.cmd("colorscheme " .. 'nightfox')
 
-vim.g.lightline = { colorscheme = 'catppuccin' }
+-- vim.g.lightline = { colorscheme = 'catppuccin' }
+require('catppuccin').setup({
+    integrations = {
+        harpoon = true,
+        telescope = true,
+    }
+})
 vim.cmd.colorscheme("catppuccin")
 
 -- vim.cmd.colorscheme("tokyonight-moon")
