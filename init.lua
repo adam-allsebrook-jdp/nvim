@@ -1,1 +1,1 @@
-require('adam')
+require("config")
