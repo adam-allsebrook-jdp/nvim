@@ -122,4 +122,12 @@ return require('packer').startup(function(use)
         cmd = 'CodeActionMenu',
     })
     use('christoomey/vim-tmux-navigator')
+
+    use('lewis6991/gitsigns.nvim')
+    use('APZelos/blamer.nvim')
+
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 end)

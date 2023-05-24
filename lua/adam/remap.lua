@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", ':Explore<CR>')
 
 -- Move selected block up/ down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -79,3 +79,5 @@ vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
     { silent = true, noremap = true }
 )
+
+vim.keymap.set("n", "<leader>fo", ":Format<CR>", { noremap = true })
