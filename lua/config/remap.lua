@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", ':Explore<CR>')
+
+vim.keymap.set("n", "<leader>fe", ':lua require("mini.files").open()<CR>')
 
 -- Move selected block up/ down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -39,3 +40,5 @@ vim.keymap.set("n", "<leader>fo", ":Format<CR>", { noremap = true })
 
 -- undo tree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+vim.keymap.set("n", "<leader>bm", ":lua require('buffer_manager.ui').toggle_quick_menu()<CR>", { noremap = true })

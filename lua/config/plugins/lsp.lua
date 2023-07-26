@@ -27,7 +27,8 @@ return {
             lsp.buffer_autoformat()
         end)
 
-        require('lspconfig').lua_ls.setup({
+        local lsp_config = require('lspconfig')
+        lsp_config.lua_ls.setup({
             settings = {
                 Lua = {
                     diagnostics = {
@@ -36,6 +37,23 @@ return {
                 }
             }
         })
+        lsp_config.svelte.setup({
+            --     filetypes = { 'typescript', 'javascript', 'svelte', 'html', 'css' },
+            --     https://www.reddit.com/r/neovim/comments/1598ewp/neovim_svelte/
+            on_attach = function(client)
+                vim.api.nvim_create_autocmd("BufWritePost", {
+                    pattern = { "*.js", "*.ts" },
+                    callback = function(ctx)
+                        client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+                    end,
+                })
+                vim.api.nvim_create_autocmd({ "BufWrite" }, {
+                    pattern = { "+page.server.ts", "+page.ts", "+layout.server.ts", "+layout.ts" },
+                    command = "LspRestart svelte",
+
+                })
+            end
+        })
 
         -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
         lsp.ensure_installed({
@@ -43,6 +61,8 @@ return {
             'lua_ls',
             'tsserver',
             'rust_analyzer',
+            'gopls',
+            'svelte'
         })
 
         lsp.setup()
