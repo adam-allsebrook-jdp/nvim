@@ -55,6 +55,17 @@ return {
             end
         })
 
+        require 'lspconfig'.pylsp.setup {
+            settings = {
+                pylsp = {
+                    plugins = {
+                        -- pydocstyle = { enabled = true, convention = 'pep257' },
+                        pylint = { enabled = true, executable = 'pylint' },
+                    }
+                }
+            }
+        }
+
         -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
         lsp.ensure_installed({
             'bashls',
@@ -62,7 +73,8 @@ return {
             'tsserver',
             'rust_analyzer',
             'gopls',
-            'svelte'
+            'svelte',
+            'pylsp',
         })
 
         lsp.setup()
