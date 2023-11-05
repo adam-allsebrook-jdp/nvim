@@ -2,7 +2,12 @@ return {
     'echasnovski/mini.nvim',
     version = false,
     init = function()
-        require('mini.ai').setup()
+        require('mini.ai').setup({
+            custom_textobjects = {
+                -- for html classes (including hyphen)
+                c = { { '%s()[%w-]+()', '[\"\']()()[%w-]+()%s?()' } },
+            }
+        })
         if vim.g.vscode then return end
         require('mini.files').setup({
             windows = {
