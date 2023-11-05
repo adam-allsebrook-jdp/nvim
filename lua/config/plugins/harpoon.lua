@@ -1,6 +1,8 @@
 return {
     'theprimeagen/harpoon',
+    cond = not vim.g.vscode,
     init = function()
+        if vim.g.vscode then return end
         local mark = require('harpoon.mark')
         local ui = require('harpoon.ui')
 

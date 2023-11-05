@@ -1,6 +1,7 @@
 if vim.g.vscode then
     print("VSCode extension")
 else
-    print("Neovim")
-    require("config")
+    print("Neovim fr")
 end
+
+require("config")

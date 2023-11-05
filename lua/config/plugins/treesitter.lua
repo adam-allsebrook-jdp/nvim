@@ -1,10 +1,13 @@
 return {
     'nvim-treesitter/nvim-treesitter',
+    cond = not vim.g.vscode,
     build = ':TSUpdate',
     init = function()
+        if vim.g.vscode then return end
         require('nvim-treesitter.configs').setup({
             -- A list of parser names, or "all" (the five listed parsers should always be installed)
-            ensure_installed = { 'c', 'lua', 'vim', 'query', 'javascript', 'typescript', 'svelte', 'rust', 'python' },
+            ensure_installed = { 'c', 'lua', 'vim', 'query', 'javascript', 'typescript', 'svelte', 'rust', 'python',
+                'make' },
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,
@@ -22,5 +25,6 @@ return {
                 additional_vim_regex_highlighting = false,
             },
         })
+        vim.treesitter.language.register("markdown", "mdx")
     end
 }

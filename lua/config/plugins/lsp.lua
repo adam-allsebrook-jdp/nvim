@@ -1,6 +1,7 @@
 -- https://github.com/VonHeikemen/lsp-zero.nvim
 return {
     'VonHeikemen/lsp-zero.nvim',
+    cond = not vim.g.vscode,
     branch = 'v2.x',
     dependencies = {
         -- LSP Support
@@ -20,6 +21,7 @@ return {
         { 'L3MON4D3/LuaSnip' },     -- Required
     },
     init = function()
+        if vim.g.vscode then return end
         local lsp = require('lsp-zero').preset({})
 
         lsp.on_attach(function(client, bufnr)
@@ -55,7 +57,11 @@ return {
             end
         })
 
-        require 'lspconfig'.pylsp.setup {
+        -- lsp_config.templ.setup({
+        --     filetypes = { 'templ' },
+        -- })
+
+        lsp_config.pylsp.setup {
             settings = {
                 pylsp = {
                     plugins = {
@@ -75,6 +81,7 @@ return {
             'gopls',
             'svelte',
             'pylsp',
+            'tailwindcss',
         })
 
         lsp.setup()
