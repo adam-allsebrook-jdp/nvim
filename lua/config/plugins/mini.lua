@@ -5,7 +5,7 @@ return {
         require('mini.ai').setup({
             custom_textobjects = {
                 -- for html classes (including hyphen)
-                c = { { '%s()[%w-]+()', '[\"\']()()[%w-]+()%s?()' } },
+                c = { { '%s()[%w-:!]+()', '[\"\']()()[%w-:!]+()%s?()' } },
             }
         })
         if vim.g.vscode then return end
