@@ -1,0 +1,10 @@
+{
+  "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
+  "lazy.nvim": { "branch": "main", "commit": "bef521ac89c8d423f9d092e37b58e8af0c099309" },
+  "leap.nvim": { "branch": "main", "commit": "3fc5e8344eac8a306baca09634fd613d1aa2c388" },
+  "mini.nvim": { "branch": "main", "commit": "32b2db5ef9066f3d7ca375ea1ccc0fc44090727d" },
+  "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
+  "vim-textobj-user": { "branch": "master", "commit": "41a675ddbeefd6a93664a4dc52f302fe3086a933" },
+  "vim-textobj-variable-segment": { "branch": "main", "commit": "51c323dca5c44f7a8e5a689b9156ef818d02188e" }
+}
