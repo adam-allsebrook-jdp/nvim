@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>fe", ':lua require("mini.files").open()<CR>')
+-- vim.keymap.set("n", "<leader>fe", ':lua require("mini.files").open()<CR>')
+vim.keymap.set("n", "<leader>fe", ":Oil<CR>")
 
 -- Move selected block up/ down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
