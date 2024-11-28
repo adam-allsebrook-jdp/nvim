@@ -16,8 +16,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- yank into system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+-- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+-- vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- delete to void
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
@@ -50,7 +50,7 @@ vscodeMapN("<leader>o", "workbench.action.files.openFolder")
 vscodeMapN("<leader>fo", "editor.action.formatDocument")
 vscodeMapN("K", "editor.action.showHover")
 vscodeMapN("<leader>r", "editor.action.referenceSearch.trigger")
-vscodeMapN("<leader>n", "editor.action.files.newUntitledFile")
+vscodeMapN("<leader>n", "workbench.action.files.newUntitledFile")
 vscodeMapN("<leader>se", "workbench.action.openSettingsJson")
 vscodeMapN("<leader>ke", "workbench.action.openGlobalKeybindingsFile")
 vscodeMapN("<leader>fj", "Format JSON")
