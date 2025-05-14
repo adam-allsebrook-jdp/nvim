@@ -8,14 +8,7 @@ return {
                 c = { { '%s()[%w:!#$%&()*+,-./[\\%]^_`{|}~]+()', '[\"\']()()[%w:!#$%&()*+,-./[\\%]^_`{|}~]+()%s?()' } },
             }
         })
-        if vim.g.vscode then return end
-        -- require('mini.files').setup({
-        --     windows = {
-        --         preview = true,
-        --         max_number = 3,
-        --         width_preview = 75
-        --     }
-        -- })
         require('mini.splitjoin').setup()
+        if vim.g.vscode then return end
     end
 }

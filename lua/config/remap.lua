@@ -40,6 +40,33 @@ vim.keymap.set("n", "<leader>er", ":lua vim.diagnostic.open_float()<CR>", { nore
 vim.keymap.set("n", "<leader>fo", ":Format<CR>", { noremap = true })
 
 -- undo tree
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+-- vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 vim.keymap.set("n", "<leader>bm", ":lua require('buffer_manager.ui').toggle_quick_menu()<CR>", { noremap = true })
+
+vim.keymap.set("n", "<leader>a", "ggVG", { noremap = true })
+
+if (vim.g.vscode) then
+    local vscode = require("vscode")
+    vim.keymap.set("n", "<leader>fo", function() vscode.action("editor.action.formatDocument", {}) end, { noremap = true })
+    vim.keymap.set("n", "K", function() vscode.action("editor.action.showHover", {}) end, { noremap = true })
+    vim.keymap.set("n", "<leader>r", function() vscode.action("editor.action.referenceSearch.trigger", {}) end, { noremap = true })
+    vim.keymap.set("n", "gd", function() vscode.action("editor.action.revealDefinition", {}) end, { noremap = true })
+    vim.keymap.set("n", "<leader>n", function() vscode.action("workbench.action.files.newUntitledFile", {}) end, { noremap = true })
+    vim.keymap.set("n", "<leader>fj", function() vscode.action("Format JSON", {}) end, { noremap = true })
+    
+    -- palantir shortcuts
+    vim.keymap.set("n", "<leader>pp", function() vscode.action("palantir.transforms.previewFile") end, { noremap = true })
+    vim.keymap.set("n", "<leader>pb", function() vscode.action("palantir.transforms.buildFile") end, { noremap = true })
+    vim.keymap.set("n", "<leader>pd", function() vscode.action("palantir.transforms.debugFile") end, { noremap = true })
+    
+    -- git shortcuts
+    vim.keymap.set("n", "<leader>gc", function() vscode.action("git.commitAll") end, { noremap = true })
+    vim.keymap.set("n", "<leader>gs", function() vscode.action("git.sync") end, { noremap = true })
+    
+    -- copilot shortcuts
+    vim.keymap.set("n", "<leader>ca", function() vscode.action("workbench.action.chat.openAgent") end, { noremap = true })
+    vim.keymap.set("n", "<leader>cq", function() vscode.action("workbench.action.chat.openAsk") end, { noremap = true })
+    vim.keymap.set("n", "<leader>ce", function() vscode.action("workbench.action.chat.openEdit") end, { noremap = true })
+
+end

@@ -6,7 +6,6 @@ return {
         opt = true
     },
     init = function()
-        if vim.g.vscode then return end
         require('lualine').setup {
             options = {
                 theme = "catppuccin",

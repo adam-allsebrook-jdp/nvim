@@ -3,7 +3,6 @@ return {
     name = 'catppuccin',
     cond = not vim.g.vscode,
     init = function()
-        if vim.g.vscode then return end
         require('catppuccin').setup({
             color_overrides = {
                 latte = {

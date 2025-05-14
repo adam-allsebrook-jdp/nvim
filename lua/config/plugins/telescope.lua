@@ -6,6 +6,7 @@ return {
         'nvim-lua/plenary.nvim',
         {
             'natecraddock/telescope-zf-native.nvim',
+            cond = not vim.g.vscode,
             init = function()
                 if vim.g.vscode then return end
                 require("telescope").load_extension("zf-native")
@@ -13,7 +14,6 @@ return {
         }
     },
     init = function()
-        if vim.g.vscode then return end
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
